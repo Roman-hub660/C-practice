@@ -2,19 +2,20 @@
 #include <stdlib.h>
 #include <math.h>
 #include <time.h>
-#include <windows.h>
 
-int main()
-{
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
+int main() {
 	srand(time(NULL));
-	int a,b,c;
+
+	int a, b, c;
+	printf("Введите основание степени: ");
 	scanf("%d", &a);
+	printf("Введите показатель степени: ");
 	scanf("%d", &b);
-	c=100+rand()%(999+1-100);
-	double res;
-	res=(double)pow(a,b)+c;
-	printf("Случайное число (от 100 до 999) - %d,\n \nРезультат расчета - %.0f\n",c, res);
+
+	c = 100 + rand() % 900;
+	double res = pow(a, b) + c;
+	printf("\nСлучайное число (от 100 до 999) - %d\n", c);
+	printf("Результат расчета - %.0f\n", res);
+
 	return 0;
 }
