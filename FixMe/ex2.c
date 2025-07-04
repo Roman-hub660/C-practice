@@ -10,22 +10,25 @@
 */
 
 #include <stdio.h>
+#include <locale.h>
 
 int main() {
+    setlocale(LC_ALL, "");
+
     int credit;
     printf("Введите количество баллов: ");
     scanf("%d", &credit);
 
-    if (credit > 0 || credit < 100) {
-        printf("Неверное значение баллов");
-    } else if (credit > 60) {
-        printf("хор");
-    } else if (credit > 80) {
-        printf("отл");
-    } else if (credit > 45) {
-        printf("удов");
-    } else {
+    if (credit >= 80 && credit <= 100) {
+        printf("отл\n");
+    } else if (credit >= 60&&credit<80) {
+        printf("хор\n");
+    } else if (credit >= 45&&credit<60) {
+        printf("удов\n");
+    } else if (credit >=0&&credit<45) {
         printf("неуд");
+    } else {
+        printf("Неверное значение баллов");
     }
 
     return 0;
