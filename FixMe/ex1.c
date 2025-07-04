@@ -9,24 +9,25 @@
 
 #include <stdio.h>
 #include <math.h>
+#include <locale.h>
 
 int main() {
+    setlocale(LC_ALL, "");
+
     int i, j;
     printf("Введите число i: ");
     scanf("%d", &i);
     printf("Введите число j: ");
     scanf("%d", &j);
-    printf("\n");
 
-    if (j % i = 0) {
+    if (i % j == 0) {
         printf(":) \n");
     }
-
-    if (pow(i, j) % 2 = 1) {
+    if (((int)pow(j, i)) % 2 ==0) {
         printf(":o \n");
     }
-
-    if (i / j > 3.25) {
+    if (((double)(i / j)) > 3.25) {
         printf(":( \n");
     }
+    return 0;
 }
